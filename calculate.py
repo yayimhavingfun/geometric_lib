@@ -1,6 +1,6 @@
-import circle
-import square
-
+import circle.py
+import square.py
+import triangle.py
 
 figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
