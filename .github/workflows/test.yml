@@ -1,0 +1,49 @@
+name: Python Tests
+
+on:
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
+    branches:
+      - main
+      - release
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      NAME: "Трембач Антонина Андреевна"
+      GROUP: "M3111"
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Print User Information
+      run: |
+        echo "ФИО: ${{ env.NAME }}"
+        echo "Группа: ${{ env.GROUP }}"
+        echo "Github Username: ${{ github.actor }}"
+
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run Code Style Check
+      run: |
+        pip install flake8
+        flake8 .
+
+    - name: Run Tests
+      run: |
+        python -m unittest discover
