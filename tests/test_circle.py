@@ -11,7 +11,7 @@ class CircleTestCase(unittest.TestCase):
 
     def test_circle_area_float(self):
         result = area(3.3)
-        self.assertEqual(result, 34.21194399759284)
+        self.assertEqual(result, 34.21194399759285)
 
     def test_circle_area_zero(self):
         result = area(0)
@@ -24,7 +24,7 @@ class CircleTestCase(unittest.TestCase):
 
     def test_circle_perimeter_float(self):
         result = perimeter(5.5)
-        self.assertEqual(result, 17.27875959474386)
+        self.assertEqual(result, 34.55751918948772)
 
     def test_circle_perimeter_zero(self):
         result = perimeter(0)

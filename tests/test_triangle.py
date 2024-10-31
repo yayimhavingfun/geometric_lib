@@ -7,15 +7,15 @@ class TriangleTestCase(unittest.TestCase):
     # area tests
     def test_triangle_area_int(self):
         result = area(2, 3, 4)
-        self.assertEqual(result, 2.90474)
+        self.assertEqual(result, 2.9047375096555625)
 
     def test_triangle_area_float(self):
         result = area(2.2, 3.3, 4.4)
-        self.assertEqual(result, 3.5147)
+        self.assertEqual(result, 3.5147323866832307)
 
     def test_triangle_area_mixed(self):
         result = area(3.3, 4, 5.5)
-        self.assertEqual(result, 6.583)
+        self.assertEqual(result, 6.546327214553213)
 
     def test_triangle_area_zero(self):
         result = area(0, 0, 0)
