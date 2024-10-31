@@ -1,5 +1,6 @@
 import math
 
+
 # Checks if the three sides can form a valid triangle.
 def is_valid(a, b, c):
     return a + b > c and a + c > b and b + c > a
