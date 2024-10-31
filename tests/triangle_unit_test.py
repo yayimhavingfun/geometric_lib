@@ -9,11 +9,11 @@ class TriangleTestCase(unittest.TestCase):
         result = area(2, 3, 4)
         self.assertEqual(result, 2.90474)
 
-    def test_triange_area_float(self):
+    def test_triangle_area_float(self):
         result = area(2.2, 3.3, 4.4)
         self.assertEqual(result, 3.5147)
 
-    def test_triange_area_mixed(self):
+    def test_triangle_area_mixed(self):
         result = area(3.3, 4, 5.5)
         self.assertEqual(result, 6.583)
 
@@ -50,17 +50,23 @@ class TriangleTestCase(unittest.TestCase):
     def test_value_validity_c(self):
         result1 = area(1, 2, 3)
         result2 = perimeter(1, 2, 3)
-        self.assertEqual(result1, result2)  # should return "side c should be less than the sum of the other two sides."
+        self.assertEqual(result1, result2)
+        # should return "side c should be less than
+        # the sum of the other two sides."
 
     def test_value_validity_b(self):
         result1 = area(1, 3, 2)
         result2 = perimeter(1, 3, 2)
-        self.assertEqual(result1, result2)  # should return "side b should be less than the sum of the other two sides."
+        self.assertEqual(result1, result2)
+        # should return "side b should be less than
+        # the sum of the other two sides."
 
     def test_value_validity_a(self):
         result1 = area(3, 2, 1)
         result2 = perimeter(3, 2, 1)
-        self.assertEqual(result1, result2)  # should return "side a should be less than the sum of the other two sides."
+        self.assertEqual(result1, result2)
+        # should return "side a should be less than
+        # the sum of the other two sides."
 
 
 if __name__ == '__main__':
