@@ -1,13 +1,23 @@
+import circle
+import square
+import triangle
+
 figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
 sizes = {}
+
+modules = {
+    'circle': circle,
+    'square': square,
+    'triangle': triangle
+}
 
 
 def calc(fig, func, size):
     assert fig in figs
     assert func in funcs
 
-    return eval(f'{fig}.{func}(*{size})')
+    return getattr(modules[fig], func)(*size)
 
 
 if __name__ == "__main__":
